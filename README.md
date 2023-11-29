@@ -1,8 +1,10 @@
 # DBP_MessengerApp
 
 - 2022년 2학기 팀 프로젝트입니다.
-- 채팅 : TCP/IP
-- 이모티콘, 사진, 파일 : FTP
+- Framwork : WinformC#
+- Database : MySQL
+- Chatting : TCP/IP Socket
+- Media (이모티콘, 사진, 파일) : FTP
 
 1. 회원 가입 기능
 2. 회원 정보 변경 기능
