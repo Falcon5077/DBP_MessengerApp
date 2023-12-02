@@ -1,7 +1,7 @@
 # DBP_MessengerApp
 
 
-| 작품 이름 | 개발기간 | 엔진 | 개발인원 | 장르 |
+| 작품 이름 | 개발기간 | 엔진 | 개발인원 | 종류 |
 | --- | --- | --- | --- | --- |
 | 윈폼톡 | 2022.11 | 윈폼 / C# | 6명 | 사내 채팅 프로그램 |
 
@@ -71,8 +71,10 @@ private void SendPhotoBtnClick(object sender, EventArgs e)
   string newFileName =  time + ".jpg";
   
   // 메세지를 DB에 저장
-  Query.GetInstance().RunQuery("INSERT INTO `talk`.`ChatMsg` (`room_ID`, `sender_ID`, `recv_ID`, `data`,`send_time`,`isImg`) " +
-      "VALUES ('" + roomID + "', '" + myID + "', '" + yourID + "', '" + newFileName + "','" + time + "','1');");
+  Query.GetInstance().RunQuery("INSERT INTO `talk`.`ChatMsg`
+        (`room_ID`, `sender_ID`, `recv_ID`, `data`,`send_time`,`isImg`) " +
+      "VALUES
+        ('" + roomID + "', '" + myID + "', '" + yourID + "', '" + newFileName + "','" + time + "','1');");
   
   // TCP를 통해 수신자에게 알림
   SendToSignal();
